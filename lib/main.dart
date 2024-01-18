@@ -1,6 +1,8 @@
 import 'package:eduzap/presentation/core/colors.dart';
 import 'package:eduzap/presentation/onboarding/onboarding_screen.dart';
 import 'package:eduzap/presentation/signin/signin_screen.dart';
+import 'package:eduzap/presentation/signup/signup_option_screen.dart';
+import 'package:eduzap/presentation/signup/signup_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
-      home: const SignInScreen(),
+      home: SignUpScreen(),
     );
   }
 }

@@ -8,12 +8,14 @@ class CustomPrimaryButton extends StatelessWidget {
   final Color color;
   final Color textColor;
   final BoxBorder? border;
+  final double? fontSize;
   const CustomPrimaryButton({
     super.key,
     required this.text,
     required this.color,
     required this.textColor,
     this.border,
+    this.fontSize,
   });
 
   @override
@@ -36,6 +38,7 @@ class CustomPrimaryButton extends StatelessWidget {
             style: GoogleFonts.plusJakartaSans(
               color: textColor,
               fontWeight: FontWeight.bold,
+              fontSize: fontSize,
             ),
           ),
         ),
