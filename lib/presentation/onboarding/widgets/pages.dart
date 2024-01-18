@@ -58,25 +58,17 @@ Widget page({
         ),
       ),
       const SizedBox(height: 40),
-      const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
-        child: CustomPrimaryButton(
-          text: "Register",
-          color: primaryBlue,
-          textColor: Colors.white,
-        ),
+      const CustomPrimaryButton(
+        text: "Register",
+        color: primaryBlue,
+        textColor: Colors.white,
       ),
       const SizedBox(height: 25),
-      Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 20.0,
-        ),
-        child: CustomPrimaryButton(
-          text: "Login",
-          color: Colors.white,
-          textColor: primaryBlue,
-          border: Border.all(color: grey100),
-        ),
+      CustomPrimaryButton(
+        text: "Login",
+        color: Colors.white,
+        textColor: primaryBlue,
+        border: Border.all(color: grey100),
       ),
     ],
   );
