@@ -93,3 +93,33 @@ class SocialButton extends StatelessWidget {
     );
   }
 }
+
+class MiniButton extends StatelessWidget {
+  final String text;
+  final Color? buttonColor;
+  const MiniButton({
+    super.key,
+    required this.text,
+    this.buttonColor = primaryBlue,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 100,
+      height: 40,
+      decoration: BoxDecoration(
+        color: buttonColor,
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Center(
+        child: CustomText(
+          text: text,
+          fontSize: 12,
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
+  }
+}

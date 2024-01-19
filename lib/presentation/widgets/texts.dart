@@ -8,6 +8,7 @@ class CustomText extends StatelessWidget {
   final FontWeight? fontWeight;
   final TextAlign? textAlign;
   final double? letterSpacing;
+  final int? maxlines;
   const CustomText({
     super.key,
     required this.text,
@@ -16,6 +17,7 @@ class CustomText extends StatelessWidget {
     this.fontWeight,
     this.textAlign,
     this.letterSpacing,
+    this.maxlines,
   });
 
   @override
@@ -23,6 +25,7 @@ class CustomText extends StatelessWidget {
     return Text(
       text,
       textAlign: textAlign,
+      maxLines: maxlines,
       style: GoogleFonts.plusJakartaSans(
         letterSpacing: letterSpacing,
         fontSize: fontSize,

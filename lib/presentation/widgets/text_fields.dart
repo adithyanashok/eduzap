@@ -48,3 +48,51 @@ class CustomTextField extends StatelessWidget {
     );
   }
 }
+
+class CustomFilledFormField extends StatelessWidget {
+  const CustomFilledFormField({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: TextFormField(
+        decoration: InputDecoration(
+          filled: true,
+          fillColor: lightPink,
+          hintText: "Graphic Illustration",
+          hintStyle: GoogleFonts.plusJakartaSans(
+            letterSpacing: 1,
+            fontSize: 18,
+            fontWeight: FontWeight.w300,
+            color: grey400,
+          ),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: const BorderSide(
+              color: Colors.white,
+            ),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: const BorderSide(
+              color: Colors.white,
+            ),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: const BorderSide(
+              color: Colors.white,
+            ),
+          ),
+          suffixIcon: const Icon(
+            Icons.search_outlined,
+            color: grey400,
+          ),
+        ),
+      ),
+    );
+  }
+}

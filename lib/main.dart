@@ -1,5 +1,6 @@
 import 'package:eduzap/presentation/core/colors.dart';
 import 'package:eduzap/presentation/home/home_screen.dart';
+import 'package:eduzap/presentation/main/main_screen.dart';
 import 'package:eduzap/presentation/onboarding/onboarding_screen.dart';
 import 'package:eduzap/presentation/signin/signin_screen.dart';
 import 'package:eduzap/presentation/signup/signup_option_screen.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      home: MainScreen(),
     );
   }
 }
