@@ -1,4 +1,5 @@
 import 'package:eduzap/presentation/core/colors.dart';
+import 'package:eduzap/presentation/course/course_screen.dart';
 import 'package:eduzap/presentation/home/home_screen.dart';
 import 'package:eduzap/presentation/main/main_screen.dart';
 import 'package:eduzap/presentation/onboarding/onboarding_screen.dart';
@@ -23,9 +24,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: primaryBlue),
         useMaterial3: true,
         scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          elevation: 0,
+        ),
       ),
       debugShowCheckedModeBanner: false,
-      home: MainScreen(),
+      home: const CourseScreen(),
     );
   }
 }

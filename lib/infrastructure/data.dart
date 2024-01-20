@@ -1,3 +1,4 @@
+import 'package:eduzap/presentation/course/widgets/rating/rating_card.dart';
 import 'package:eduzap/presentation/home/widgets/course_card.dart';
 
 final List<CourseCard> courses = [
@@ -36,5 +37,38 @@ final List<CourseCard> courses = [
     courseImg: 'course1.jpg',
     rating: 5,
     tutorName: 'Nikhil',
+  ),
+];
+
+final List<RatingCard> ratings = [
+  const RatingCard(
+    imageName: "avatar.jpg",
+    name: "Rafael",
+    review:
+        "Lectus vitae lorem lorem luctus mostie vitae mbi curabitur magna facilisis turpis nullam nibh gfas ultricies purus molestie quis impert id agger",
+  ),
+  const RatingCard(
+    imageName: "course1.jpg",
+    name: "James",
+    review:
+        "Lectus vitae lorem lorem luctus mostie vitae mbi curabitur magna facilisis turpis nullam nibh gfas ultricies purus molestie quis impert id agger",
+  ),
+  const RatingCard(
+    imageName: "course2.jpg",
+    name: "Sam",
+    review:
+        "Lectus vitae lorem lorem luctus mostie vitae mbi curabitur magna facilisis turpis nullam nibh gfas ultricies purus molestie quis impert id agger",
+  ),
+  const RatingCard(
+    imageName: "coding.jpg",
+    name: "Sam",
+    review:
+        "Lectus vitae lorem lorem luctus mostie vitae mbi curabitur magna facilisis turpis nullam nibh gfas ultricies purus molestie quis impert id agger",
+  ),
+  const RatingCard(
+    imageName: "course2.jpg",
+    name: "Sam",
+    review:
+        "Lectus vitae lorem lorem luctus mostie vitae mbi curabitur magna facilisis turpis nullam nibh gfas ultricies purus molestie quis impert id agger",
   ),
 ];
