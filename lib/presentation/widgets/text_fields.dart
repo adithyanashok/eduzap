@@ -6,11 +6,19 @@ class CustomTextField extends StatelessWidget {
   final String hintText;
   final Widget? suffixIcon;
   final bool obscureText;
+  final int? maxLength;
+  final int? maxLines;
+  final Function(String value)? onChanged;
+  final TextEditingController? controller;
   const CustomTextField({
     super.key,
     required this.hintText,
     this.suffixIcon,
     this.obscureText = false,
+    this.maxLength,
+    this.maxLines,
+    this.onChanged,
+    this.controller,
   });
 
   @override
@@ -18,6 +26,9 @@ class CustomTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20),
       child: TextFormField(
+        controller: controller,
+        maxLength: maxLength,
+        maxLines: maxLines,
         obscureText: obscureText,
         obscuringCharacter: '*',
         decoration: InputDecoration(
@@ -44,14 +55,25 @@ class CustomTextField extends StatelessWidget {
             ),
           ),
         ),
+        onChanged: (value) {
+          onChanged!(value);
+        },
       ),
     );
   }
 }
 
 class CustomFilledFormField extends StatelessWidget {
+  final Widget? suffixIcon;
+  final String hintText;
+  final int? maxLines;
+  final int? maxLength;
   const CustomFilledFormField({
     super.key,
+    this.suffixIcon,
+    required this.hintText,
+    this.maxLines,
+    this.maxLength,
   });
 
   @override
@@ -59,10 +81,12 @@ class CustomFilledFormField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: TextFormField(
+        maxLines: maxLines,
+        maxLength: maxLength,
         decoration: InputDecoration(
           filled: true,
           fillColor: lightPink,
-          hintText: "Graphic Illustration",
+          hintText: hintText,
           hintStyle: GoogleFonts.plusJakartaSans(
             letterSpacing: 1,
             fontSize: 18,
@@ -87,10 +111,7 @@ class CustomFilledFormField extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          suffixIcon: const Icon(
-            Icons.search_outlined,
-            color: grey400,
-          ),
+          suffixIcon: suffixIcon,
         ),
       ),
     );

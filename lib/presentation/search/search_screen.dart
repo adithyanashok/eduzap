@@ -15,7 +15,13 @@ class SearchScreen extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
-          const CustomFilledFormField(),
+          const CustomFilledFormField(
+            hintText: "Graphic Illustration",
+            suffixIcon: Icon(
+              Icons.search_outlined,
+              color: grey400,
+            ),
+          ),
           const Padding(
             padding: EdgeInsets.only(left: 20),
             child: CustomText(

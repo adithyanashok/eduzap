@@ -21,7 +21,7 @@ class CourseAppBar extends StatelessWidget {
         IconButton(
           onPressed: () {},
           icon: const Icon(Icons.save_alt_outlined),
-        )
+        ),
       ],
     );
   }

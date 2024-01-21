@@ -9,6 +9,7 @@ class CustomPrimaryButton extends StatelessWidget {
   final Color textColor;
   final BoxBorder? border;
   final double? fontSize;
+  final VoidCallback? onTap;
   const CustomPrimaryButton({
     super.key,
     required this.text,
@@ -16,29 +17,35 @@ class CustomPrimaryButton extends StatelessWidget {
     required this.textColor,
     this.border,
     this.fontSize,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 20.0,
-      ),
-      child: Container(
-        width: double.infinity,
-        height: 60,
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(5),
-          border: border,
+    return InkWell(
+      onTap: () {
+        onTap!();
+      },
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 20.0,
         ),
-        child: Center(
-          child: Text(
-            text,
-            style: GoogleFonts.plusJakartaSans(
-              color: textColor,
-              fontWeight: FontWeight.bold,
-              fontSize: fontSize,
+        child: Container(
+          width: double.infinity,
+          height: 60,
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(5),
+            border: border,
+          ),
+          child: Center(
+            child: Text(
+              text,
+              style: GoogleFonts.plusJakartaSans(
+                color: textColor,
+                fontWeight: FontWeight.bold,
+                fontSize: fontSize,
+              ),
             ),
           ),
         ),

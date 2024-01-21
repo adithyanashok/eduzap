@@ -1,3 +1,4 @@
+import 'package:eduzap/presentation/core/colors.dart';
 import 'package:eduzap/presentation/home/widgets/category_section.dart';
 import 'package:eduzap/presentation/home/widgets/course_card.dart';
 import 'package:eduzap/presentation/home/widgets/course_section.dart';
@@ -43,7 +44,13 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 50),
         children: [
           const Header(),
-          const CustomFilledFormField(),
+          const CustomFilledFormField(
+            hintText: "Graphic Illustration",
+            suffixIcon: Icon(
+              Icons.search_outlined,
+              color: grey400,
+            ),
+          ),
           const CategorySection(),
           const SizedBox(height: 30),
           CourseSection(

@@ -36,7 +36,7 @@ class RatingCard extends StatelessWidget {
             children: [
               RatingCardHeader(name: name),
               SizedBox(
-                width: 280,
+                width: 320,
                 child: CustomText(
                   text: review,
                   fontSize: 14,
@@ -61,7 +61,7 @@ class RatingCardHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 280,
+      width: 320,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
